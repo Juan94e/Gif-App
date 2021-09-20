@@ -5,9 +5,9 @@ export const GifGridItem = ( {img} ) => {
     console.log(img)
 
     return (
-        <div>
-            <img src={ img.url } alt={ img.title } />
+        <div className="card">
             <p> { img.title } </p>
+            <img src={ img.url } alt={ img.title } />
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { CategoryAdd } from './components/CategoryAdd'
-import './index.css';
+// import './index.css';
 import { Switch, Grid, Typography, Button, Paper } from '@material-ui/core';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import SearchIcon from '@mui/icons-material/Search';
