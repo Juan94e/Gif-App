@@ -17,7 +17,7 @@ export const CategoryAdd = ( {setCategories, theme }) => {
         if ( inputValue.trim().length > 2 ){
             setCategories( (categs) => [...categs, inputValue ] );
             setInputValue('');
-        }
+        } 
     }
 
     return (
