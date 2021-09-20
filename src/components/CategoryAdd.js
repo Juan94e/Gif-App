@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Input from '@mui/material/Input';
-import { ThemeProvider } from '@material-ui/core/styles';
+// import { ThemeProvider } from '@material-ui/core/styles';
 // import customTheme from '../styles/customTheme';
 
 export const CategoryAdd = ( {setCategories, theme }) => {
@@ -21,7 +21,7 @@ export const CategoryAdd = ( {setCategories, theme }) => {
     }
 
     return (
-        <ThemeProvider theme={theme} >
+        <div>
             <form onSubmit={ handleSubmit }>
                 <Input
                     type="text"
@@ -33,6 +33,6 @@ export const CategoryAdd = ( {setCategories, theme }) => {
             </form>
 
             <hr  />
-        </ThemeProvider>
+        </div>
     );
 }
