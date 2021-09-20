@@ -1,15 +1,33 @@
 import React, { useState } from 'react'
+import { CategoryAdd } from './components/CategoryAdd'
 import './index.css';
 import { Switch, Grid, Typography, Button, Paper } from '@material-ui/core';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import SearchIcon from '@mui/icons-material/Search';
+import { GifGrid } from './components/GifGrid';
+
+let testiando = false;
+
+const cambio = () => {
+
+    testiando = !testiando;
+    console.log(testiando)
+    
+}
+
 
 export const GifExpertApp = () => {
 
+// ***Start dark mode material UI***
     const [darkMode, setDarkMode] = useState(false);
 
     const theme = createTheme ({
-        palette: { 
+        palette: {
+            secondary: {
+                main: "#FFF",
+                light: "#FFF",
+                dark: "#FFF"
+            }, 
             type: darkMode ? "dark" : "light",
         },
     });
@@ -18,37 +36,36 @@ export const GifExpertApp = () => {
         setDarkMode(!darkMode)
     }
 
+// ***End dark mode material UI***
     
-    const [categories, setCategories] = useState(['en componentes el dark mode etc', 'mirar lo del shadow y color en el boton para que sea blanco', 'mañana viernes termino'])
-    
-    // setCategories toma el valor del estado anterior y lo guarda en "categs" y devuelve ese nuevo Array(valor)
-    const handleAdd = () => {
-        setCategories( (categs) => [...categs, 'otra mas'] )
-    }
+    const [categories, setCategories] = useState(['en componentes el dark mode etc'])
 
     return (
         <ThemeProvider theme={theme}>
-            <Paper style={{height: "100vh", padding:"15px"}} elevation={2} square >
-                
+            <Paper style={{height: "100%", padding:"15px"}} elevation={2} square >
+                <Switch color="primary" checked={darkMode} onChange={ handleSwitch } />
                 <h2>GifExpertApp</h2>
+                <CategoryAdd setCategories={ setCategories }  theme={ theme } />
                 {/* <hr /> */}
                 <Button 
                     size="large"
-                    color="primary"
+                    color="secondary"
                     variant="contained"
                     startIcon={<SearchIcon />}
-                    onClick={ handleAdd }
+                    onClick={ () => cambio()}
                 >
                     Search
                 </Button>
                 <ol>
                     {
                         categories.map(category => {
-                            return <li key={category}> {category} </li>
+                            return <GifGrid
+                            category={ category }
+                            key={category} 
+                            />
                         })
                     }
                 </ol>
-                    <Switch color="primary" checked={darkMode} onChange={ handleSwitch } />
                 
             </Paper>
         </ThemeProvider>
