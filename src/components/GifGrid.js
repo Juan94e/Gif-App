@@ -9,9 +9,8 @@ export const GifGrid = ( {category} ) => {
         getGifs();
     }, [])
 
-
     const getGifs = async() => {
-        const url = 'https://api.giphy.com/v1/gifs/search?q=Rick+and+Morty&limit=10&api_key=M6hqmV7sKXm49MA7xT5ayne2tndKJFhj'
+        const url = `https://api.giphy.com/v1/gifs/search?q=${ encodeURI(category) }&limit=10&api_key=M6hqmV7sKXm49MA7xT5ayne2tndKJFhj`
         const resp = await fetch(url);
         const { data } = await resp.json();
 
@@ -26,23 +25,23 @@ export const GifGrid = ( {category} ) => {
         //dentro de una const (no es global), entonces no se puede llamar afuera
         //pero con ese "setImages" mandamos la informacion a una funcion global
         setImages( gifs )
-
     }
-
 
     return (
         <div>
             <h3> { category } </h3>
-            
-            {
-                images.map( (img) => {
-                    return <GifGridItem
-                        key={ img.id }
-                        img = { img }
-                    />
-                })
-            }
-            
+            <div className="card-grid" >
+
+                {
+                    images.map( (img) => {
+                        return <GifGridItem
+                            key={ img.id }
+                            img = { img }
+                        />
+                    })
+                }
+
+            </div>
         </div>
     )
 }

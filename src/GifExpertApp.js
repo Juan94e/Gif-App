@@ -38,7 +38,7 @@ export const GifExpertApp = () => {
 
 // ***End dark mode material UI***
     
-    const [categories, setCategories] = useState(['en componentes el dark mode etc'])
+    const [categories, setCategories] = useState(['One Punch'])
 
     return (
         <ThemeProvider theme={theme}>
