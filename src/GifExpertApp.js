@@ -4,7 +4,8 @@ import { CategoryAdd } from './components/CategoryAdd'
 import { Switch, Button, Paper } from '@material-ui/core';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import SearchIcon from '@mui/icons-material/Search';
-import { GifGrid } from './components/GifGrid';
+// import { GifGrid } from './components/GifGrid';
+import { GifRender } from './components/GifRender';
 
 let testiando = false;
 
@@ -32,7 +33,7 @@ export const GifExpertApp = () => {
         },
     });
 
-    const handleSwitch = () => {
+    const handleSwitch = () => { 
         setDarkMode(!darkMode)
     }
 
@@ -56,16 +57,7 @@ export const GifExpertApp = () => {
                 >
                     Search
                 </Button>
-                <ol>
-                    {
-                        categories.map(category => {
-                            return <GifGrid
-                            category={ category }
-                            key={category} 
-                            />
-                        })
-                    }
-                </ol>
+                <GifRender categories={ categories } setCategories={ setCategories } />
                 
             </Paper>
         </ThemeProvider>

@@ -9,8 +9,8 @@ export const GifGrid = ( {category} ) => {
     useEffect( () => {
         getGifs( category )
             .then( imgs => setImages( imgs ) )
-    }, [])
-    
+    }, [ category ])
+
     return (
         <div>
             <h3> { category } </h3>
