@@ -1,0 +1,9 @@
+
+.navbar-nav {
+    margin-right: -60px;
+}
+
+.bg-dark {
+    background-color: black!important;
+    transition: all 0.6s ease; 
+}

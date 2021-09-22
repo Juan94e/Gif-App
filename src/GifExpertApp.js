@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import SearchIcon from '@mui/icons-material/Search';
 // import { GifGrid } from './components/GifGrid';
 import { GifRender } from './components/GifRender';
+import { Navbar } from './components/NavBar';
 
 let testiando = false;
 
@@ -44,10 +45,10 @@ export const GifExpertApp = () => {
     return (
         <ThemeProvider theme={theme}>
             <Paper style={{height: "100%", padding:"15px"}} elevation={2} square >
+                <Navbar />
                 <Switch color="primary" checked={darkMode} onChange={ handleSwitch } />
                 <h2>GifExpertApp</h2>
                 <CategoryAdd setCategories={ setCategories }  theme={ theme } />
-                {/* <hr /> */}
                 <Button 
                     size="large"
                     color="secondary"
