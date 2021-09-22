@@ -6,9 +6,17 @@ body {
 
 
 .card-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around;; */
+  display: grid;
+  grid-template-columns: 33% 33% 33% ;
+}
+
+#card-container {
+  padding: 10px;
+  padding-top: 30px;
 }
 
 .card {
@@ -20,5 +28,9 @@ body {
   overflow: hidden;
   
 }
+
+/* #contenidoc {
+  background-color: #112031
+} */
 
 

@@ -16,18 +16,20 @@ export const GifGridItem = ( {img} ) => {
         //     <p> { img.title } </p>
         //     <img src={ img.url } alt={ img.title } />
         // </div>
-        <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-                component="img"
-                height="180"
-                image={ img.url }
-                alt={ img.title }
-            />
-            <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    { img.title } 
-                </Typography>
-            </CardContent>        
-        </Card>
+        <div id="card-container" >
+            <Card  sx={{ maxWidth: 345, height: 300 }}>
+                <CardMedia
+                    component="img"
+                    height="180"
+                    image={ img.url }
+                    alt={ img.title }
+                />
+                <CardContent id="contenidoc" >
+                    <Typography gutterBottom variant="h5" component="div">
+                        { img.title } 
+                    </Typography>
+                </CardContent>        
+            </Card>
+        </div>
     )
 }

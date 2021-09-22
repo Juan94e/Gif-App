@@ -22,20 +22,17 @@ export const CategoryAdd = ( {setCategories, theme }) => {
 
     return (
         <div>
-            <form onSubmit={ handleSubmit }>
-                <Input
-                    type="text"
+            <form className="d-flex" onSubmit={ handleSubmit }>
+                <input
+                    className="form-control me-2"
+                    type="search"
                     value={ inputValue }
-                    color="primary"
-                    placeholder="Search"
+                    placeholder="Search Gif"
+                    aria-label="Search"
                     onChange={ handleInputChange }
                 />
+                {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
             </form>
-            <form className="d-flex">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <hr  />
         </div>
     );
 }
