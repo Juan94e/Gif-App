@@ -47,7 +47,7 @@ export const GifExpertApp = () => {
             <Paper style={{height: "100%"}} elevation={2} square >
                 <Navbar setCategories={ setCategories } />
                 <Switch color="primary" checked={darkMode} onChange={ handleSwitch } />
-                <CategoryAdd setCategories={ setCategories }  theme={ theme } />
+                
                 <Button 
                     size="large"
                     color="secondary"
