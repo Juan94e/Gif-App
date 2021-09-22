@@ -40,14 +40,13 @@ export const GifExpertApp = () => {
 
 // ***End dark mode material UI***
     
-    const [categories, setCategories] = useState(['One Punch'])
+    const [categories, setCategories] = useState(['Eric Cartman'])
 
     return (
         <ThemeProvider theme={theme}>
-            <Paper style={{height: "100%", padding:"15px"}} elevation={2} square >
-                <Navbar />
+            <Paper style={{height: "100%"}} elevation={2} square >
+                <Navbar setCategories={ setCategories } />
                 <Switch color="primary" checked={darkMode} onChange={ handleSwitch } />
-                <h2>GifExpertApp</h2>
                 <CategoryAdd setCategories={ setCategories }  theme={ theme } />
                 <Button 
                     size="large"
