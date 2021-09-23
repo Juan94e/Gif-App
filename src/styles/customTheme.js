@@ -1,14 +1,10 @@
 import { createTheme } from '@material-ui/core/styles';
-import { green, purple } from '@mui/material/colors';
+import { green, red,purple, blue } from '@mui/material/colors';
 
 export const lightTheme = createTheme ({
     palette: {
         type:"light",
-        secondary: {
-            main: '#e3f2fd',
-            light: '#FFF',
-            dark: '#42a5f5'
-        },
+        secondary: blue,
     },
 });
 
