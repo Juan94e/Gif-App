@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { getGifs } from '../helpers/getGIfs';
 import { GifGridItem } from './GifGridItem';
+import Typography from '@mui/material/Typography';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { darkTheme, lightTheme } from '../styles/customTheme';
 
 export const GifGrid = ( {category} ) => {
 
@@ -12,8 +15,8 @@ export const GifGrid = ( {category} ) => {
     }, [ category ])
 
     return (
-        <div>
-            <h3> { category } </h3>
+        <ThemeProvider  theme={darkTheme}>
+            <Typography variant="h2" > { category } </Typography>
             <div className="card-grid" >
 
                 {
@@ -26,6 +29,6 @@ export const GifGrid = ( {category} ) => {
                 }
 
             </div>
-        </div>
+        </ThemeProvider>
     )
 }

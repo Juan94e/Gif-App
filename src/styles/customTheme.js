@@ -1,15 +1,24 @@
-// import { createTheme } from '@material-ui/core/styles';
-// import { green, purple } from '@mui/material/colors';
+import { createTheme } from '@material-ui/core/styles';
+import { green, purple } from '@mui/material/colors';
 
-// const customTheme = createTheme ({
-//     palette: { 
-//         secondary: {
-//             main: "#999",
-//             dark: "#999",
-//             light: "#999"
-//         }
-//     }
+export const lightTheme = createTheme ({
+    palette: {
+        type:"light",
+        secondary: {
+            main: '#e3f2fd',
+            light: '#FFF',
+            dark: '#42a5f5'
+        },
+    },
+});
 
-// });
-
-// export default customTheme;
+export const darkTheme = createTheme ({
+    palette: {
+        type:"dark",
+        secondary: green,
+        background: {
+            default: "#212529",
+            paper: "#212529"
+          },
+    },
+});

@@ -2,35 +2,36 @@
 body {
   padding: 0px;
   margin: 0px;
+  background-color: #212529;
 }
 
 
 .card-grid {
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-around;; */
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; */
   display: grid;
-  grid-template-columns: 33% 33% 33% ;
+  grid-template-columns: 35% 35% 35% ;
 }
+
 
 #card-container {
   padding: 10px;
   padding-top: 30px;
 }
 
-.card {
-  align-content: center;
-  border: 1px solid grey;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  overflow: hidden;
-  
+#contenidoc {
+  /* background-color: #212529; */
+  color: white;
 }
 
-/* #contenidoc {
-  background-color: #112031
-} */
+@media only screen and (max-width: 1025px) {
 
+  .card-grid {
+    display: grid;;
+    grid-template-columns: 93%;
+    grid-template-rows: 10%;
+  }
 
+}
