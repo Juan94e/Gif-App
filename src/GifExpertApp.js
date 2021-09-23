@@ -4,8 +4,8 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import { GifRender } from './components/GifRender';
 import { Navbar } from './components/NavBar';
-// import { Prueba } from './components/Prueba';
 import { darkTheme, lightTheme } from './styles/customTheme';
+import { Footer } from './components/footer/Footer';
 
 export const GifExpertApp = () => {
 
@@ -25,7 +25,7 @@ export const GifExpertApp = () => {
                 <Navbar setCategories={ setCategories } setDarkMode={ setDarkMode } darkMode={ darkMode } />
                 {/* <Prueba /> */}
                 <GifRender categories={ categories } setCategories={ setCategories } />
-                
+                <Footer />
             </Paper>
         </ThemeProvider>
     )

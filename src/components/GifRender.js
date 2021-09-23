@@ -1,5 +1,6 @@
 import React from 'react'
 import { GifGrid } from './GifGrid'
+import '../styles/GifRender.css'
 
 //por que hice este componente? 
 //para poder dejar el 'GifExpertApp.js' un poco menos saturado.
@@ -8,15 +9,17 @@ import { GifGrid } from './GifGrid'
 
 export const GifRender = ( { categories } ) => {
     return (
-        <ol>
-            {
-                categories.map(category => {
-                    return <GifGrid
-                    category={ category }
-                    key={category} 
-                    />
-                })
-            }
-        </ol>
+        <div className="gifRender-container">
+            <ol>
+                {
+                    categories.map(category => {
+                        return <GifGrid
+                        category={ category }
+                        key={category} 
+                        />
+                    })
+                }
+            </ol>
+        </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const CategoryAdd = ( {setCategories, theme }) => {
+export const CategoryAdd = ( {setCategories }) => {
    
     const [inputValue, setInputValue] = useState('')
 

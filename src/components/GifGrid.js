@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { getGifs } from '../helpers/getGIfs';
 import { GifGridItem } from './GifGridItem';
 import Typography from '@mui/material/Typography';
-import { ThemeProvider } from '@material-ui/core/styles';
-import { darkTheme, lightTheme } from '../styles/customTheme';
-import { Paper } from '@material-ui/core';
 
 export const GifGrid = ( {category} ) => {
 
