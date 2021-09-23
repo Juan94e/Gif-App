@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import Input from '@mui/material/Input';
-// import { ThemeProvider } from '@material-ui/core/styles';
-// import customTheme from '../styles/customTheme';
 
 export const CategoryAdd = ( {setCategories, theme }) => {
    
@@ -24,14 +21,13 @@ export const CategoryAdd = ( {setCategories, theme }) => {
         <div>
             <form className="d-flex" onSubmit={ handleSubmit }>
                 <input
-                    className="form-control me-2"
+                    className="form-control me-2 input-focus"
                     type="search"
                     value={ inputValue }
                     placeholder="Search Gif"
                     aria-label="Search"
                     onChange={ handleInputChange }
                 />
-                {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
             </form>
         </div>
     );

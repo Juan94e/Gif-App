@@ -3,7 +3,8 @@ import { getGifs } from '../helpers/getGIfs';
 import { GifGridItem } from './GifGridItem';
 import Typography from '@mui/material/Typography';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { darkTheme } from '../styles/customTheme';
+import { darkTheme, lightTheme } from '../styles/customTheme';
+import { Paper } from '@material-ui/core';
 
 export const GifGrid = ( {category} ) => {
 
@@ -15,8 +16,8 @@ export const GifGrid = ( {category} ) => {
     }, [ category ])
 
     return (
-        <ThemeProvider  theme={darkTheme}>
-            <Typography variant="h2" color="secondary" > { category } </Typography>
+        <div >
+            <Typography id="category-capitalize" variant="h2"> { category } </Typography>
             <div className="card-grid" >
 
                 {
@@ -29,6 +30,6 @@ export const GifGrid = ( {category} ) => {
                 }
 
             </div>
-        </ThemeProvider>
+        </div>
     )
 }

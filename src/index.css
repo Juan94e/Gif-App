@@ -5,6 +5,15 @@ body {
   background-color: #212529;
 }
 
+.input-focus:focus {
+  outline: none !important;
+  border:1px solid #00e676;
+  box-shadow: 0 0 6px #00e676;
+}
+
+#category-capitalize {
+  text-transform: capitalize;
+}
 
 .card-grid {
   /* display: flex;
@@ -12,7 +21,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around; */
   display: grid;
-  grid-template-columns: 35% 35% 35% ;
+  grid-template-columns: 35% 35% 30% ;
 }
 
 
@@ -31,7 +40,7 @@ body {
   .card-grid {
     display: grid;;
     grid-template-columns: 93%;
-    grid-template-rows: 10%;
+    grid-template-rows: 8%;
   }
 
 }

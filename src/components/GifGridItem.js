@@ -36,7 +36,7 @@ export const GifGridItem = ( {img} ) => {
                         alt={ img.title }
                     />
                     <CardContent id="contenidoc" >
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom variant="h6" component="div">
                             { img.title } 
                         </Typography>
                     </CardContent>        

@@ -16,5 +16,10 @@ export const darkTheme = createTheme ({
             default: "#212529",
             paper: "#212529"
           },
+        text: {
+            main: '"FFF',
+            primary: '#00e676',
+            secondary: '#00e676',
+        },
     },
 });

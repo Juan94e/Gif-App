@@ -8,9 +8,8 @@
     transition: all 0.6s ease; 
 } */
 
-#duro {
-    margin: 0px 10px;
-    justify-content: space-between;
-    padding-right: 100px;
+
+.green-color {
+    color: #00e676!important;
 }
 
