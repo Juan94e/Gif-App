@@ -25,7 +25,7 @@ export const GifGridItem = ( { img, darkMode } ) => {
                     sx={{
                         maxWidth: 345,
                         height: 380,
-                        boxShadow: 3,
+                        boxShadow: 10,
                         borderRadius: 2,
                         bgcolor: darkMode ? "#212529" : null,
                     }}>
