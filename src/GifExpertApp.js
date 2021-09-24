@@ -24,7 +24,7 @@ export const GifExpertApp = () => {
             <Paper id="home" style={{height: "100%", width: "100%" }} elevation={0} square >
                 <Navbar setCategories={ setCategories } setDarkMode={ setDarkMode } darkMode={ darkMode } />
                 {/* <Prueba /> */}
-                <GifRender categories={ categories } setCategories={ setCategories } />
+                <GifRender categories={ categories } setCategories={ setCategories } darkMode={ darkMode } />
                 <Footer />
             </Paper>
         </ThemeProvider>

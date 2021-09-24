@@ -30,7 +30,7 @@ body {
   padding-top: 30px;
 }
 
-#contenidoc {
+.contenidoc {
   /* background-color: #212529; */
   color: white;
 }

@@ -3,7 +3,7 @@ import { getGifs } from '../helpers/getGIfs';
 import { GifGridItem } from './GifGridItem';
 import Typography from '@mui/material/Typography';
 
-export const GifGrid = ( {category} ) => {
+export const GifGrid = ( { category, darkMode } ) => {
 
     const [images, setImages] = useState([]);
 
@@ -22,6 +22,7 @@ export const GifGrid = ( {category} ) => {
                         return <GifGridItem
                             key={ img.id }
                             img = { img }
+                            darkMode = { darkMode }
                         />
                     })
                 }

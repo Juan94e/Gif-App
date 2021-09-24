@@ -10,7 +10,7 @@ import { blue } from '@mui/material/colors';
 
 
 
-export const GifGridItem = ( {img} ) => {
+export const GifGridItem = ( { img, darkMode } ) => {
 
     // console.log(img)
 
@@ -27,7 +27,7 @@ export const GifGridItem = ( {img} ) => {
                         height: 380,
                         boxShadow: 3,
                         borderRadius: 2,
-                        bgcolor: "#212529",
+                        bgcolor: darkMode ? "#212529" : null,
                     }}>
                     <CardMedia
                         component="img"
@@ -35,7 +35,7 @@ export const GifGridItem = ( {img} ) => {
                         image={ img.url }
                         alt={ img.title }
                     />
-                    <CardContent id="contenidoc" >
+                    <CardContent className={`${ darkMode ? "contenidoc" : null } `} >
                         <Typography gutterBottom variant="h6" component="div">
                             { img.title } 
                         </Typography>

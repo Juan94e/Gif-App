@@ -7,7 +7,7 @@ import '../styles/GifRender.css'
 // Ya que no pude separar el 'theme' en otro archivo.
 //asi que este le mande como props categories y las leo desde aqui
 
-export const GifRender = ( { categories } ) => {
+export const GifRender = ( { categories, darkMode } ) => {
     return (
         <div className="gifRender-container">
             <ol>
@@ -15,6 +15,7 @@ export const GifRender = ( { categories } ) => {
                     categories.map(category => {
                         return <GifGrid
                         category={ category }
+                        darkMode={ darkMode }
                         key={category} 
                         />
                     })
