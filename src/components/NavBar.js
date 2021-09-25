@@ -14,7 +14,7 @@ export const Navbar = ( { setCategories, darkMode, setDarkMode } ) => {
         <nav   className= { "navbar sticky-top navbar-expand-lg navbar-dark bg-dark shadow" }  >
             <div className="container-fluid">
 
-                <a href="#home" className={`navbar-brand ${ darkMode ? "green-color" : null } `} >GifExpertApp</a>
+                <a href="#home" className={`navbar-brand ${ darkMode ? "green-color" : null } `} >Find ur Gif</a>
                 <Switch color="secondary" checked={darkMode} onChange={ handleSwitch } />
                 <CategoryAdd setCategories={ setCategories } />
 

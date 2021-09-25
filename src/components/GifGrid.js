@@ -48,7 +48,7 @@ export const GifGrid = ( { category, darkMode } ) => {
                 Next
             </button>
 
-            <Typography id="category-capitalize" variant="h2"> { category } </Typography>
+            <Typography id="category-capitalize" variant="h3"> { category } </Typography>
             <div className="card-grid" >
 
                 {

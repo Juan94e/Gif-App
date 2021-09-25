@@ -10,7 +10,7 @@ import { Footer } from './components/footer/Footer';
 export const GifExpertApp = () => {
 
 // ***Start dark mode material UI***
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
 
     const handleSwitch = () => { 
         setDarkMode(!darkMode)
